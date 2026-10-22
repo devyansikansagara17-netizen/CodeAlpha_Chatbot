@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="avatar">AI</div>
+            <div>
+                <h1>CodeAlpha Assistant</h1>
+                <p><span class="status"></span> Online | Ready to help</p>
+            </div>
+        </header>
+
+        <main id="chat-box" class="chat-box">
+            <div class="message bot">
+                Hello! 👋 Welcome to CodeAlpha Assistant.
+                Ask me about services, prices, refunds, payments or support hours.
+            </div>
+        </main>
+
+        <form id="chat-form" class="chat-form">
+            <input id="user-input" type="text"
+                   placeholder="Type your message..."
+                   maxlength="1000" autocomplete="off" required>
+            <button type="submit" id="send-button">Send ➤</button>
+        </form>
+
+        <footer>Powered by Python &amp; Flask</footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
